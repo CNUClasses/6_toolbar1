@@ -6,12 +6,19 @@
         android:id="@+id/menu1"
         android:orderInCategory="100"
         android:title="i1"
-        app:showAsAction="always" />
+        android:icon="@android:drawable/ic_menu_camera"
+        app:showAsAction="always"
+        />
     <item
         android:id="@+id/menu2"
         android:orderInCategory="200"
         android:title="i2"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="250"
+        android:title="Help"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="300"

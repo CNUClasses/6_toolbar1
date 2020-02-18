@@ -1,10 +1,12 @@
 package com.example.a6_toolbar1;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -46,27 +48,40 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id){
-            case R.id.action_settings:
-                Snackbar.make(MainActivity.this.findViewById(R.id.col), "settings chosen", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                break;
 
             case R.id.menu1:
                 Snackbar.make(MainActivity.this.findViewById(R.id.col), "menu1 chosen", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                return true;
 
-                break;
 
             case R.id.menu2:
+                return true;
+
+            case R.id.action_settings:
+                Snackbar.make(MainActivity.this.findViewById(R.id.col), "settings chosen", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                break;
+            case R.id.action_help:
+                //pop a dialog
+                showDialogWithContentAndTitle("Made by me", "Help about");
                 break;
 
         }
+        return super.onOptionsItemSelected(item);   //default
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    private void showDialogWithContentAndTitle(String content, String title) {
+    new AlertDialog.Builder(this)
+            .setMessage(content)
+            .setTitle(title)
+            .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            })
+            .create()
+            .show();
     }
 }
