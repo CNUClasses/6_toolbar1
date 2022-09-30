@@ -48,15 +48,13 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id){
-
             case R.id.menu1:
                 Snackbar.make(MainActivity.this.findViewById(R.id.col), "menu1 chosen", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                return true;
-
+                break;
 
             case R.id.menu2:
-                return true;
+                break;
 
             case R.id.action_settings:
                 Snackbar.make(MainActivity.this.findViewById(R.id.col), "settings chosen", Snackbar.LENGTH_LONG)
