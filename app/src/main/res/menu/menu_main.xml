@@ -12,7 +12,7 @@
     <item
         android:id="@+id/menu2"
         android:orderInCategory="200"
-        android:title="i2"
+        android:title="dont do this"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_help"

@@ -70,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showDialogWithContentAndTitle(String content, String title) {
-    new AlertDialog.Builder(this)
-            .setMessage(content)
-            .setTitle(title)
+    new AlertDialog.Builder(this).setMessage(content).setTitle(title)
             .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
