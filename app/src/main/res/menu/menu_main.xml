@@ -6,7 +6,7 @@
         android:id="@+id/menu1"
         android:orderInCategory="100"
         android:title="i1"
-        android:icon="@android:drawable/ic_menu_camera"
+        android:icon="@android:drawable/ic_input_get"
         app:showAsAction="always"
         />
     <item

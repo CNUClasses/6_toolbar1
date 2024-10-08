@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String SEEK_BAR_KEY = "seek_bar_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
